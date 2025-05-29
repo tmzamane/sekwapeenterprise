@@ -15,33 +15,33 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-   <link rel="stylesheet" href="css/services-pages.css">
+    <link rel="stylesheet" href="css/services-pages.css">
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Security Solutions",
-  "description": "Professional security solutions for homes and businesses.",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Sekwape Enterprise"
-  },
-  "serviceType": [
-    "Home Security Systems",
-    "Business Security Systems",
-    "CCTV Installation",
-    "Alarm Monitoring"
-  ],
-  "areaServed": {
-    "@type": "City",
-    "name": "Your City/Region"
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "your-quote-page-security.php"
-  }
-}
-</script>
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Security Solutions",
+            "description": "Professional security solutions for homes and businesses.",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Sekwape Enterprise"
+            },
+            "serviceType": [
+                "Home Security Systems",
+                "Business Security Systems",
+                "CCTV Installation",
+                "Alarm Monitoring"
+            ],
+            "areaServed": {
+                "@type": "City",
+                "name": "Your City/Region"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "your-quote-page-security.php"
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -57,7 +57,7 @@
         <section class="hero-section service-section section" id="security-services">
             <div class="hero-content-wrapper service-content-wrapper">
                 <div class="hero-image-container service-image-container">
-                    <img src="images/security.jpg" alt="Security Services" class="hero-image service-image parallax-image" data-aos="fade-down" data-aos-delay="100">
+                    <img src="images/security.png" alt="Security Services" class="hero-image service-image parallax-image" data-aos="fade-down" data-aos-delay="100">
                 </div>
                 <div class="hero-content service-content">
                     <div class="sub-heading" data-aos="slide-down" data-aos-delay="100">Ensuring Peace of Mind</div>
@@ -69,7 +69,7 @@
                         <li><strong>Risk Assessment and Consulting:</strong> Identifying vulnerabilities and developing security plans.</li>
                         <li><strong>Emergency Response:</strong> Quick and effective response to security incidents.</li>
                     </ul>
-                        <a href="#services-offered section" class="primary-button" data-aos="fade-zoom-in" data-aos-delay="400">Read More</a>
+                    <a href="#services-offered section" class="primary-button" data-aos="fade-zoom-in" data-aos-delay="400">Read More</a>
                 </div>
             </div>
         </section>

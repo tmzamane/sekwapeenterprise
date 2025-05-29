@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    
+
     <header class="header-section">
         <div class="container">
             <h1 data-aos="fade-down" data-aos-duration="800">Reliable Courier Services in South Africa</h1>
@@ -28,7 +28,7 @@
         <section class="hero-section service-section section" id="courier-services">
             <div class="hero-content-wrapper service-content-wrapper">
                 <div class="hero-image-container service-image-container">
-                    <img src="images/courier.jpg" alt="Courier Services Image" class="hero-image service-image parallax-image" data-aos="fade-right" data-aos-duration="800">
+                    <img src="images/courier.png" alt="Courier Services Image" class="hero-image service-image parallax-image" data-aos="fade-right" data-aos-duration="800">
                 </div>
                 <div class="hero-content service-content">
                     <div class="sub-heading" data-aos="slide-down" data-aos-delay="100">Fast &amp; Secure Delivery</div>
@@ -166,8 +166,8 @@
                     <div class="cta-buttons">
                         <a href="quote.php" class="button primary-button">Get a Quote</a>
                         <a href="tel:012 8850 188" class="button secondary-button">Call Us</a>
-                         <a href="https://wa.me/+2761694918" target="_blank" class="button whatsapp-button-inline" width="110px height="10px">
-                        <i class="fab fa-whatsapp"></i>WhatsApp </a>
+                        <a href="https://wa.me/+2761694918" target="_blank" class="button whatsapp-button-inline" width="110px height=" 10px">
+                            <i class="fab fa-whatsapp"></i>WhatsApp </a>
                     </div>
                 </div>
             </div>

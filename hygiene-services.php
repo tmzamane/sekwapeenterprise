@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hygiene Services - Sekwape Cleaning & Hygiene Solutions</title>
-        <meta name="description" content="Sekwape Cleaning & Hygiene Solutions offers comprehensive hygiene services across South Africa. We provide expert cleaning, disinfection, and tailored plans for various environments. Request a quote today!">
+    <meta name="description" content="Sekwape Cleaning & Hygiene Solutions offers comprehensive hygiene services across South Africa. We provide expert cleaning, disinfection, and tailored plans for various environments. Request a quote today!">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -13,38 +13,38 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/services-pages.css">
-    
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Hygiene Services",
-  "description": "Sekwape Cleaning & Hygiene Solutions offers comprehensive hygiene services across South Africa. We provide expert cleaning, disinfection, and tailored plans for various environments.",
-  "provider": {
-    "@type": "LocalBusiness", // Or "Organization"
-    "name": "Sekwape Cleaning & Hygiene Solutions",
-    "telephone": "066 1694 918" // Add your phone number
-    // Add other relevant LocalBusiness/Organization properties
-  },
-  "serviceType": [
-    "Deep Cleaning Services",
-    "Disinfection & Sanitization",
-    "Restroom Hygiene Services",
-    "Healthcare Facility Cleaning",
-    "Food Service Hygiene",
-    "Pest Control Services"
-  ],
-  "areaServed": {
-    "@type": "Country",
-    "name": "ZA" // South Africa
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "quote.php" // Link to your quote page
-  },
-  "keywords": "hygiene services, cleaning, disinfection, sanitization, South Africa, commercial cleaning, healthcare cleaning, pest control"
-}
-</script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Hygiene Services",
+            "description": "Sekwape Cleaning & Hygiene Solutions offers comprehensive hygiene services across South Africa. We provide expert cleaning, disinfection, and tailored plans for various environments.",
+            "provider": {
+                "@type": "LocalBusiness", // Or "Organization"
+                "name": "Sekwape Cleaning & Hygiene Solutions",
+                "telephone": "066 1694 918" // Add your phone number
+                // Add other relevant LocalBusiness/Organization properties
+            },
+            "serviceType": [
+                "Deep Cleaning Services",
+                "Disinfection & Sanitization",
+                "Restroom Hygiene Services",
+                "Healthcare Facility Cleaning",
+                "Food Service Hygiene",
+                "Pest Control Services"
+            ],
+            "areaServed": {
+                "@type": "Country",
+                "name": "ZA" // South Africa
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "quote.php" // Link to your quote page
+            },
+            "keywords": "hygiene services, cleaning, disinfection, sanitization, South Africa, commercial cleaning, healthcare cleaning, pest control"
+        }
+    </script>
 </head>
 
 <body class="hygiene-services-page">
@@ -57,25 +57,26 @@
 
     </header>
     <main>
-    <section class="service-section section" id="shuttle-services">
-        <div class="service-content-wrapper">
-            <div class="service-image-container">
-                    <img src="images/hygiene.jpg" alt="Waste collection truck emptying bins in a residential area" class="service-image parallax-image"
+        <section class="service-section section" id="shuttle-services">
+            <div class="service-content-wrapper">
+                <div class="service-image-container">
+                    <img src="images/hygiene.png" alt="Waste collection truck emptying bins in a residential area" class="service-image parallax-image"
                         data-aos="fade-right" data-aos-duration="800">
-            </div>
-            <div class="service-content">
-                <div class="sub-heading" data-aos="slide-down" data-aos-delay="100">Creating Healthier Environments</div>
-                <h2 class="heading dark-text" data-aos="zoom-out" data-aos-delay="200">Comprehensive Hygiene Services Across South Africa</h2>
-                <p class="paragraph-text" data-aos="fade-up-right" data-aos-delay="300">Our hygiene services play a critical role in maintaining healthy and safe environments in various settings across South Africa. We help to prevent the spread of disease and ensure the well-being of people in schools, hospitals, workplaces, and public spaces.</p>
-                <ul class="section-list" data-aos="slide-right" data-aos-duration="600" data-aos-delay="100">
-                    <li><strong>Expert Cleaning & Disinfection:</strong> Utilizing advanced techniques and eco-friendly products.</li>
+                </div>
+                <div class="service-content">
+                    <div class="sub-heading" data-aos="slide-down" data-aos-delay="100">Creating Healthier Environments</div>
+                    <h2 class="heading dark-text" data-aos="zoom-out" data-aos-delay="200">Comprehensive Hygiene Services Across South Africa</h2>
+                    <p class="paragraph-text" data-aos="fade-up-right" data-aos-delay="300">Our hygiene services play a critical role in maintaining healthy and safe environments in various settings across South Africa. We help to prevent the spread of disease and ensure the well-being of people in schools, hospitals, workplaces, and public spaces.</p>
+                    <ul class="section-list" data-aos="slide-right" data-aos-duration="600" data-aos-delay="100">
+                        <li><strong>Expert Cleaning & Disinfection:</strong> Utilizing advanced techniques and eco-friendly products.</li>
                         <li><strong>Tailored Hygiene Plans:</strong> Customized solutions to meet your specific requirements.</li>
                         <li><strong>Trained & Certified Professionals:</strong> Ensuring high standards of service and expertise.</li>
                         <li><strong>Commitment to Well-being:</strong> Prioritizing the health and safety of your environment.</li>
-                </ul>
-                <a href="contact_us.php" class="button primary-button" data-aos="fade-zoom-in" data-aos-delay="400">Contact Us Today</a>            </div>
+                    </ul>
+                    <a href="contact_us.php" class="button primary-button" data-aos="fade-zoom-in" data-aos-delay="400">Contact Us Today</a>
+                </div>
             </div>
-    </section>
+        </section>
 
         <section class="why-choose-us-section section">
             <div class="container">
@@ -183,8 +184,8 @@
                 </div>
             </div>
         </section>
-        
-        
+
+
 
         <section class="call-to-action-section section concluding-section">
             <div class="container">
@@ -261,4 +262,5 @@
         });
     });
 </script>
+
 </html>

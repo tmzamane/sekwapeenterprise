@@ -254,7 +254,7 @@
                 </div>
             </div>
             <div class="carousel-slide">
-                <img src="images/courier-services.jpg" alt="Courier Services">
+                <img src="images/courier-services.png" alt="Courier Services">
                 <div class="carousel-content">
                     <h1>Courier Services</h1>
                     <p>Our courier services ensure fast and secure delivery of your packages and documents. We handle everything with care and precision, providing reliable delivery solutions tailored to your needs. Trust us for timely deliveries!</p>

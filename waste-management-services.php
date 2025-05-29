@@ -13,41 +13,41 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/services-pages.css">
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Sustainable Waste Management Solutions",
-  "description": "Sekwape Enterprise offers reliable and sustainable waste management services across South Africa, including residential, commercial, and industrial waste collection, recycling, and responsible disposal.",
-  "provider": {
-    "@type": "LocalBusiness",  // Or "Organization"
-    "name": "Sekwape Enterprise",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "ZA"  // South Africa
-      // Add more address details if available (streetAddress, addressLocality, etc.)
-    },
-    "telephone": "066 1694 918 / 012 8850 188" // Add your phone number
-    .)
-  },
-  "serviceType": [
-    "Residential Waste Collection",
-    "Commercial Waste Management",
-    "Industrial Waste Solutions",
-    "Hazardous Waste Management",
-    "Electronic Waste Recycling",
-    "Special Waste Services"
-  ],
-  "areaServed": {
-    "@type": "Country",
-    "name": "ZA"  // South Africa
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "quote.php"  // The URL to your quote/contact form
-  },
-  "keywords": "waste management, recycling, waste disposal, South Africa, waste collection, environmental services" // Add relevant keywords
-}
-</script>
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Sustainable Waste Management Solutions",
+            "description": "Sekwape Enterprise offers reliable and sustainable waste management services across South Africa, including residential, commercial, and industrial waste collection, recycling, and responsible disposal.",
+            "provider": {
+                "@type": "LocalBusiness", // Or "Organization"
+                "name": "Sekwape Enterprise",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "ZA" // South Africa
+                    // Add more address details if available (streetAddress, addressLocality, etc.)
+                },
+                "telephone": "066 1694 918 / 012 8850 188" // Add your phone number
+                    .)
+        },
+        "serviceType": [
+            "Residential Waste Collection",
+            "Commercial Waste Management",
+            "Industrial Waste Solutions",
+            "Hazardous Waste Management",
+            "Electronic Waste Recycling",
+            "Special Waste Services"
+        ],
+        "areaServed": {
+            "@type": "Country",
+            "name": "ZA" // South Africa
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "quote.php" // The URL to your quote/contact form
+        },
+        "keywords": "waste management, recycling, waste disposal, South Africa, waste collection, environmental services" // Add relevant keywords
+        }
+    </script>
 </head>
 
 <body>
@@ -60,27 +60,28 @@
 
     </header>
     <main>
-    <section class="service-section section" id="shuttle-services">
-        <div class="service-content-wrapper">
-            <div class="service-image-container">
-                    <img src="images/waste-collection.jpg" alt="Waste collection truck emptying bins in a residential area" class="service-image parallax-image"
+        <section class="service-section section" id="shuttle-services">
+            <div class="service-content-wrapper">
+                <div class="service-image-container">
+                    <img src="images/waste-collection.png" alt="Waste collection truck emptying bins in a residential area" class="service-image parallax-image"
                         data-aos="fade-right" data-aos-duration="800">
-            </div>
-            <div class="service-content">
-                <div class="sub-heading" data-aos="fade-up">Your Reliable Waste Partner</div>
+                </div>
+                <div class="service-content">
+                    <div class="sub-heading" data-aos="fade-up">Your Reliable Waste Partner</div>
                     <h2 class="heading" data-aos="fade-up" data-aos-delay="100">Efficient & Sustainable Waste Management Solutions</h2>
                     <p class="section-description" data-aos="fade-up" data-aos-delay="200">
                         We offer reliable and sustainable waste management services across South Africa. Our focus is on providing efficient collection, responsible disposal, and promoting environmentally friendly practices for a cleaner future.
                     </p>
-                <ul class="section-list" data-aos="slide-right" data-aos-duration="600" data-aos-delay="100">
-                    <li><strong>Comprehensive Waste Collection:</strong> Tailored services for residential, commercial, and industrial needs.</li>
-                    <li><strong>Eco-Friendly Disposal:</strong> Commitment to environmentally responsible waste handling and recycling.</li>
-                    <li><strong>Timely and Reliable Service:</strong> Ensuring your waste is managed efficiently and on schedule.</li>
-                    <li><strong>Expert Waste Management Advice:</strong> Guidance on best practices and regulatory compliance.</li>
-                </ul>
-                <a href="contact_us.php" class="button primary-button" data-aos="fade-zoom-in" data-aos-delay="400">Contact Us Today</a>            </div>
+                    <ul class="section-list" data-aos="slide-right" data-aos-duration="600" data-aos-delay="100">
+                        <li><strong>Comprehensive Waste Collection:</strong> Tailored services for residential, commercial, and industrial needs.</li>
+                        <li><strong>Eco-Friendly Disposal:</strong> Commitment to environmentally responsible waste handling and recycling.</li>
+                        <li><strong>Timely and Reliable Service:</strong> Ensuring your waste is managed efficiently and on schedule.</li>
+                        <li><strong>Expert Waste Management Advice:</strong> Guidance on best practices and regulatory compliance.</li>
+                    </ul>
+                    <a href="contact_us.php" class="button primary-button" data-aos="fade-zoom-in" data-aos-delay="400">Contact Us Today</a>
+                </div>
             </div>
-    </section>
+        </section>
 
         <section class="why-choose-us section">
             <div class="container">
@@ -184,8 +185,8 @@
                 </div>
             </div>
         </section>
-        
-        
+
+
 
         <section class="call-to-action section">
             <div class="container">
@@ -198,99 +199,98 @@
     <?php include_once "footer.php"; ?>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        "use strict"; // Enable strict mode
 
-"use strict"; // Enable strict mode
-
-// AOS Initialization
-AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: false  // Consistent setting
-});
-
-// WhatsApp Link Behavior
-const whatsappLinkContainer = document.querySelector('.sekwape-whatsapp-link-container');
-let timeoutId;
-
-function hideOnScroll() {
-    whatsappLinkContainer.classList.add('hidden');
-}
-
-function showAfterScrollStop() {
-    whatsappLinkContainer.classList.remove('hidden');
-}
-
-window.addEventListener('scroll', function() {
-    hideOnScroll();
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(showAfterScrollStop, 300);
-});
-
-// FAQ Accordion Logic
-const faqQuestions = document.querySelectorAll('.faq-question');
-faqQuestions.forEach(question => {
-    question.addEventListener('click', function() {
-        this.classList.toggle('active');
-        const answer = this.nextElementSibling;
-        answer.classList.toggle('active');
-    });
-});
-
-// Section Focus/Hover Effects (Optimized with IntersectionObserver)
-const sections = document.querySelectorAll('.section');
-let currentlyHoveredSection = null;
-
-const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('focused');
-        } else {
-            entry.target.classList.remove('focused');
-            if (entry.target === currentlyHoveredSection) {
-                entry.target.classList.remove('hovered');
-                currentlyHoveredSection = null;
-            }
-        }
-    });
-}, {
-    threshold: 0.1 // Adjust as needed
-});
-
-sections.forEach(section => {
-    sectionObserver.observe(section);
-
-    section.addEventListener('mouseenter', function() {
-        if (currentlyHoveredSection && currentlyHoveredSection !== this) {
-            currentlyHoveredSection.classList.remove('hovered');
-        }
-        this.classList.add('hovered');
-        currentlyHoveredSection = this;
-    });
-
-    section.addEventListener('mouseleave', function() {
-        this.classList.remove('hovered');
-        currentlyHoveredSection = null;
-    });
-});
-
-// Animated Grid (if applicable)
-const fleetGrid = document.querySelector('.animated-grid');
-if (fleetGrid) {
-    const gridObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                fleetGrid.classList.add('loaded');
-                gridObserver.unobserve(fleetGrid);
-            }
+        // AOS Initialization
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false // Consistent setting
         });
-    }, {
-        threshold: 0.5
-    });
 
-    gridObserver.observe(fleetGrid);
-}
+        // WhatsApp Link Behavior
+        const whatsappLinkContainer = document.querySelector('.sekwape-whatsapp-link-container');
+        let timeoutId;
+
+        function hideOnScroll() {
+            whatsappLinkContainer.classList.add('hidden');
+        }
+
+        function showAfterScrollStop() {
+            whatsappLinkContainer.classList.remove('hidden');
+        }
+
+        window.addEventListener('scroll', function() {
+            hideOnScroll();
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(showAfterScrollStop, 300);
+        });
+
+        // FAQ Accordion Logic
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const answer = this.nextElementSibling;
+                answer.classList.toggle('active');
+            });
+        });
+
+        // Section Focus/Hover Effects (Optimized with IntersectionObserver)
+        const sections = document.querySelectorAll('.section');
+        let currentlyHoveredSection = null;
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('focused');
+                } else {
+                    entry.target.classList.remove('focused');
+                    if (entry.target === currentlyHoveredSection) {
+                        entry.target.classList.remove('hovered');
+                        currentlyHoveredSection = null;
+                    }
+                }
+            });
+        }, {
+            threshold: 0.1 // Adjust as needed
+        });
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+
+            section.addEventListener('mouseenter', function() {
+                if (currentlyHoveredSection && currentlyHoveredSection !== this) {
+                    currentlyHoveredSection.classList.remove('hovered');
+                }
+                this.classList.add('hovered');
+                currentlyHoveredSection = this;
+            });
+
+            section.addEventListener('mouseleave', function() {
+                this.classList.remove('hovered');
+                currentlyHoveredSection = null;
+            });
+        });
+
+        // Animated Grid (if applicable)
+        const fleetGrid = document.querySelector('.animated-grid');
+        if (fleetGrid) {
+            const gridObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        fleetGrid.classList.add('loaded');
+                        gridObserver.unobserve(fleetGrid);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            gridObserver.observe(fleetGrid);
+        }
     </script>
-        <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             const fleetGrid = document.querySelector('.animated-grid');
             if (fleetGrid) {
