@@ -238,7 +238,7 @@
     <header class="hero">
         <div class="carousel">
             <div class="carousel-slide active">
-                <img src="images/pexels-tima-miroshnichenko-6169056.jpg" alt="Welcome to Sekwape Enterprise">
+                <img src="images/pexels-tima-miroshnichenko-6169056.png" alt="Welcome to Sekwape Enterprise">
                 <div class="carousel-content">
                     <h1>Simplify operations with one partner.</h1>
                     <p>Sekwapwe Enterprise offers a comprehensive suite of services including transportation, courier, waste management, hygiene, and security. We are committed to enhancing your efficiency and reducing your workload with our integrated solutions.</p>
@@ -262,7 +262,7 @@
                 </div>
             </div>
             <div class="carousel-slide">
-                <img src="images/waste-management.jpg" alt="Waste Management">
+                <img src="images/waste-management.png" alt="Waste Management">
                 <div class="carousel-content">
                     <h1>Waste Management</h1>
                     <p>Maintain a clean and sustainable environment with our waste management services. We offer efficient waste disposal and recycling solutions, helping you reduce your environmental footprint. Contact us for a cleaner tomorrow!</p>
@@ -270,7 +270,7 @@
                 </div>
             </div>
             <div class="carousel-slide">
-                <img src="images/hygiene-services.jpg" alt="Hygiene Services">
+                <img src="images/hygiene-services.png" alt="Hygiene Services">
                 <div class="carousel-content">
                     <h1>Hygiene Services</h1>
                     <p>Ensure a healthy and safe environment with our comprehensive hygiene services. We provide thorough cleaning and sanitation solutions for commercial and residential spaces. Experience the difference with our professional services!</p>
@@ -278,7 +278,7 @@
                 </div>
             </div>
             <div class="carousel-slide">
-                <img src="images/security.jpg" alt="Security Services">
+                <img src="images/security.png" alt="Security Services">
                 <div class="carousel-content">
                     <h1>Security Services</h1>
                     <p>Protect your assets and ensure safety with our professional security solutions. We offer reliable and vigilant security services tailored to your specific needs. Trust us to provide peace of mind with our expert security team.</p>
