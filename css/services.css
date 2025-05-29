@@ -1,0 +1,511 @@
+:root {
+    --primary-color: #ad471d;
+    --secondary-color: #f0f0f0;
+    --text-color: #333;
+    --white-color: #fff;
+    --light-orange: #faeee6;
+    --light-gray: #f0f0f0;
+    --white-off: #fffafa;
+    --dark-text: #222;
+    --font-family: 'Work Sans', sans-serif;
+    --default-padding: 20px;
+    --default-margin: 20px;
+    --heading-font-weight: 600;
+    --subheading-font-weight: 500;
+    --transition-duration: 0.3s;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --light-gray-rgb: 240, 240, 240;
+    /* Merged from the second :root block */
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #f4f4f4, #ffffff);
+    color: var(--text-color);
+    line-height: 1.7;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll for parallax */
+    font-size: 15.5px;
+    /* Base font size */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--default-padding);
+}
+
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.heading {
+    font-size: 50px;
+    /* Maintain existing heading size */
+    font-family: "Work Sans", sans serif;
+    font-weight: 950;
+    padding: 10px 0;
+    line-height: normal;
+    color: black;
+}
+
+.sub-heading {
+    color: #ad471d;
+    font-weight: 500;
+    font-size: 18px;
+    /* Slightly larger than base for emphasis */
+}
+
+.paragraph-text {
+    text-align: left;
+    margin-bottom: var(--default-margin);
+    color: var(--text-color);
+}
+
+.header-section {
+    padding: 120px 0;
+    text-align: center;
+    color: var(--white-color);
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    /* Keep the parallax effect */
+    background-image: linear-gradient(45deg, #ad471d, black, #f0f0f0, #ad471d, black);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.header-section h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+}
+
+.header-section p {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: var(--white-off);
+}
+
+/* Updated Styles to match Waste Management Section */
+.service-section {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    /* For animated divider */
+    overflow: hidden;
+    /* For animated divider */
+}
+
+.service-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.service-image-container {
+    flex: 1;
+    max-width: 50%;
+    overflow: hidden;
+    /* For image zoom */
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    /* Prevent extra space below image */
+    transition: transform 0.5s ease-in-out;
+    /* For image zoom */
+}
+
+.section-subtitle {
+    color: #ad471d;
+    font-size: 16px;
+    /* Slightly larger than base */
+    font-weight: 500;
+}
+
+.section-title {
+    color: #222;
+    font-size: 24px;
+    /* Maintain existing title size */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.section-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.section-list li::before {
+    content: "✓";
+    color: #ad471d;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.section-list li {
+    font-weight: normal;
+}
+
+.section-list li>strong {
+    font-weight: 600;
+}
+
+.request-button {
+    background-color: #ad471d;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    align-self: flex-start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* For hover effect */
+}
+
+.request-button:hover {
+    background-color: #7a310f;
+    transform: translateY(-2px);
+    /* For hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* For hover effect */
+}
+
+@media (max-width: 768px) {
+    .service-content-wrapper {
+        flex-direction: column;
+    }
+
+    .service-image-container {
+        max-width: 100%;
+    }
+}
+
+/* Car Fleet Styling - Placed outside .text-content */
+.car-fleet-container {
+    padding: 30px var(--default-padding);
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 30px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.car-fleet-title {
+    font-size: 1.8em;
+    /* Slightly increased title size */
+    color: var(--primary-color);
+    font-weight: var(--heading-font-weight);
+    margin-bottom: 25px;
+    /* Increased margin for more spacing */
+}
+
+.car-fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Adjusted minmax for more space per item */
+    gap: 20px;
+    list-style-type: none;
+    padding-left: 0;
+    justify-content: center;
+}
+
+.car-fleet-item {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    display: flex;
+    /* Use flex to align image and text vertically */
+    flex-direction: column;
+    align-items: center;
+}
+
+.car-fleet-item img {
+    max-width: 80%;
+    /* Slightly reduced image size */
+    height: auto;
+    max-height: 80px;
+    /* Slightly reduced max height */
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.car-fleet-item span {
+    font-size: 1em;
+    color: var(--dark-text);
+    font-weight: 500;
+    /* Added some weight to the text */
+}
+
+.car-fleet-item .car-count {
+    font-size: 0.9em;
+    /* Smaller font size for the count */
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+.service-feature-list li::before {
+    content: '✓';
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.service-detail-section {
+    padding: 60px 0;
+    background-color: var(--white-off);
+    border-bottom: 1px solid #eee;
+}
+
+.service-detail-section .container>* {
+    padding: 20px 0;
+    /* Vertical padding for spacing */
+}
+
+.service-detail-section .container>*:nth-child(odd) {
+    background-color: rgba(var(--light-gray-rgb, 240, 240, 240), 0.3);
+    /* Light gray with some transparency */
+}
+
+.service-detail-section .subsection-title {
+    color: black;
+    /* Changed color to black */
+    font-size: 2.0em;
+    /* Slightly reduced font size for better visual balance */
+    font-weight: var(--heading-font-weight);
+    margin-bottom: 15px;
+    text-align: left;
+    /* Already aligned left, keeping it explicit */
+    padding-top: 0;
+}
+
+.service-detail-section p {
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.service-detail-section h3 {
+    color: var(--dark-text);
+    font-size: 1.6em;
+    /* Maintain existing h3 size */
+    font-weight: var(--subheading-font-weight);
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.service-detail-section ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    margin-bottom: 20px;
+    text-align: left;
+    /* Ensure list is left-aligned */
+}
+
+.service-detail-section ul li {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.service-detail-section ul li strong {
+    font-weight: var(--subheading-font-weight);
+    color: var(--dark-text);
+}
+
+/* Thin separator */
+.service-detail-section .container>*+* {
+    /* Apply to all elements after the first */
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.service-detail-section .container>*:first-child {
+    border-top: none;
+    /* Remove top border for the first element */
+    padding-top: 0;
+}
+
+@media (max-width: 768px) {
+    .service-detail-section .subsection-title {
+        font-size: 1.8em;
+    }
+
+    .service-detail-section p {
+        font-size: 1em;
+    }
+
+    .service-detail-section h3 {
+        font-size: 1.4em;
+    }
+}
+
+/* Advanced Design Ideas */
+
+/* Animated Section Dividers */
+.service-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+    animation: slideIn 3s linear infinite;
+}
+
+@keyframes slideIn {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Subtle Background Animation */
+body {
+    background: linear-gradient(to bottom right, #f4f4f4, #ffffff);
+    animation: gradientShift 5s ease-in-out infinite alternate;
+    background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Image Zoom on Hover */
+.service-image-container {
+    overflow: hidden;
+}
+
+.service-image {
+    transition: transform 0.5s ease-in-out;
+}
+
+.service-image-container:hover .service-image {
+    transform: scale(1.05);
+}
+
+/* Text Reveal on Scroll (requires AOS library) */
+.section-title,
+.section-subtitle,
+.section-description,
+.section-list {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    transform: translateY(20px);
+}
+
+body[data-aos-easing="ease"] .section-title[data-aos],
+body[data-aos-easing="ease"] .section-subtitle[data-aos],
+body[data-aos-easing="ease"] .section-description[data-aos],
+body[data-aos-easing="ease"] .section-list[data-aos] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* More pronounced hover effect on buttons */
+.request-button {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.request-button:hover {
+    background-color: #7a310f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Parallax on Service Images (subtle) */
+.service-image-container {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    /* Ensure container adjusts to image height */
+}
+
+.service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    transform: translateZ(0);
+    /* Creates a stacking context for parallax */
+}
+
+.service-content-wrapper {
+    transform-style: preserve-3d;
+    /* Enable 3D transformations for children */
+}
+
+/* Adjust translateY based on scroll (requires JavaScript) */
+.parallax-image {
+    transform: translateY(calc(var(--scroll-y) * 0.2));
+    /* Adjust the 0.2 for speed */
+}

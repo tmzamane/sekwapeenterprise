@@ -1,0 +1,69 @@
+.heading {
+  font-size: 44px;
+  font-family: "Work Sans", sans serif;
+  font-weight: 800;
+  text-align: center;
+  padding: 10px 0;
+  color: black;
+}
+.sub-heading {
+  text-align: center;
+  color: #ad471d;
+  font-weight: 700;
+}
+.full-width-section.bg-light-orange {
+  background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h100v100H0z" fill="%23faeee6"/%3E%3Cpath d="M0 0l100 100M100 0L0 100" stroke="%23f5e5d9" stroke-width="1"/%3E%3C/svg%3E'); /* Light diagonal lines */
+}
+
+.full-width-section.bg-light-gray {
+  background-image: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h40v40H0z" fill="%23f0f0f0"/%3E%3Cpath d="M0 20h40M20 0v40" stroke="%23e5e5e5" stroke-width="1"/%3E%3C/svg%3E'); /* Light grid pattern */
+}
+
+.full-width-section.bg-white {
+  background-image: url('data:image/svg+xml,%3Csvg width="4" height="4" viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h4v4H0z" fill="white"/%3E%3Cpath d="M1 1h2v2H1z" fill="%23f9f9f9"/%3E%3C/svg%3E'); /* Subtle paper texture */
+}
+
+.full-width-section.bg-mission {
+  background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h100v100H0z" fill="%23FFFAFA"/%3E%3Ccircle cx="50" cy="50" r="30" fill="rgba(200, 150, 100, 0.1)"/%3E%3C/svg%3E'); /* Very light circular gradient */
+}
+
+
+.primary-button {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #AD471D;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer; /* Change cursor to indicate it's interactive */
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: inline-block; /* Allows it to be styled like a block but sit inline */
+  text-decoration: none; /* Remove default link underline */
+}
+
+.primary-button:hover {
+  background-color: #7e350f;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.primary-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.primary-button:hover::before {
+  transform: translateX(100%);
+}

@@ -1,0 +1,1234 @@
+   :root {
+        --primary-color: #ad471d;
+        --secondary-color: #f0f0f0;
+        --text-color: #333;
+        --white-color: #fff;
+        --light-orange: #faeee6;
+        --light-gray: #f0f0f0;
+        --white-off: #fffafa;
+        --dark-text: #222;
+        --font-family: 'Work Sans', sans-serif;
+        --default-padding: 20px;
+        --default-margin: 20px;
+        --heading-font-weight: 800;
+        --subheading-font-weight: 700;
+        --transition-duration: 0.3s;
+        --border-radius: 10px;
+        --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        --check-mark-color: #AD471D;
+        --section-padding: 60px 0;
+        /* Reduced from 80px 0 */
+    }
+
+    /* --- Base Body Styles --- */
+    body {
+        font-family: var(--font-family);
+        margin: 0;
+        padding: 0;
+        color: var(--text-color);
+        line-height: 1.5;
+        /* Reduced from 1.7 for more compactness */
+        overflow-x: hidden;
+        /* Prevent horizontal scroll */
+        background-color: #f8f8f8;
+        /* Light background for contrast */
+        scroll-behavior: smooth;
+    }
+
+    /* --- Global Container for Centering Content --- */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--default-padding);
+    }
+
+    /* --- General Section Styling --- */
+    .section {
+        padding: var(--section-padding);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        background-color: var(--white-color);
+        transition: transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+    }
+
+    /* --- Headings and Subheadings --- */
+    .heading {
+        font-size: 44px;
+        font-weight: var(--heading-font-weight);
+        padding: 2px 0;
+        /* Reduced from 5px 0 */
+        color: var(--dark-text);
+        line-height: 1.1;
+        /* Slightly reduced from 1.2 */
+        margin-bottom: 10px;
+        /* Added margin-bottom for consistent spacing */
+    }
+
+    .sub-heading {
+        color: var(--primary-color);
+        font-weight: var(--subheading-font-weight);
+        font-size: 1.1em;
+        /* Consistent font size */
+        margin-bottom: 2px;
+        /* Reduced from 5px */
+    }
+
+    /* --- Primary Button Styling (reused from your original) --- */
+    .primary-button {
+        font-family: var(--font-family);
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        padding: 15px 25px;
+        border: none;
+        border-radius: var(--border-radius);
+        font-size: 15px;
+        cursor: pointer;
+        transition: all var(--transition-duration) ease;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .primary-button:hover {
+        background-color: #7e350f;
+        /* Darker shade for hover */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+    }
+
+    .primary-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transform: translateX(-100%);
+        transition: transform 0.6s ease;
+    }
+
+    .primary-button:hover::before {
+        transform: translateX(100%);
+    }
+
+    /* --- SERVICE SECTION SPECIFIC STYLES --- */
+    .service-section {
+        background-color: transparent;
+        /* Changed to transparent to remove shading */
+        padding: var(--section-padding);
+        /* Keep section padding */
+        /* Other existing styles for .service-section */
+    }
+
+    .service-content-wrapper {
+        display: flex;
+        /* Makes the image and text containers line up */
+        flex-direction: row;
+        /* Default: image left, text right */
+        align-items: stretch;
+        /* **Crucial: Makes children stretch to fill parent's height** */
+        gap: 30px;
+        /* Reduced from 40px */
+        width: 100%;
+        /* Make it fit the entire width */
+        max-width: none;
+        /* Remove max-width constraint */
+        margin: 0 auto;
+        /* Centers the wrapper */
+        box-sizing: border-box;
+        /* Include padding and border in the element's total width */
+        min-height: 450px;
+        /* **Ensures the wrapper has a minimum height for the image to fill** */
+        padding: 0;
+        /* Removed padding from wrapper itself */
+        background-color: transparent;
+        /* Remove background */
+        box-shadow: none;
+        /* Remove box shadow */
+        border-radius: 0;
+        /* Remove border-radius if no background */
+    }
+
+    .service-image-container {
+        flex: 1;
+        /* Allows this container to grow and shrink */
+        max-width: 50%;
+        /* Limits it to half the width of the wrapper */
+        display: flex;
+        /* Make it a flex container for the image */
+        align-items: center;
+        /* Center image vertically */
+        justify-content: center;
+        /* Center image horizontally */
+        overflow: hidden;
+        /* Hide any overflow if image is cropped */
+        border-radius: var(--border-radius);
+        /* Inherit/apply border-radius */
+        padding: 10px;
+        /* Reduced from 15px */
+        box-sizing: border-box;
+        /* Ensure padding is included in width */
+    }
+
+    .service-image {
+        width: 100%;
+        /* Make the image fill its container's width */
+        height: 100%;
+        /* **Make the image fill its container's height** */
+        object-fit: cover;
+        /* **Crops the image to fit without distortion** */
+        display: block;
+        /* Remove extra space below image */
+        border-radius: var(--border-radius);
+        /* Apply rounded corners to the image */
+        box-shadow: var(--box-shadow);
+        /* Keep shadow on image */
+    }
+
+    .service-content {
+        flex: 1;
+        /* Allows this container to grow and shrink */
+        max-width: 50%;
+        /* Limits it to half the width of the wrapper */
+        display: flex;
+        /* Use flexbox for internal content alignment */
+        flex-direction: column;
+        /* Stack content vertically */
+        justify-content: center;
+        /* Vertically center content if there's extra space */
+        padding: 10px;
+        /* Reduced from 15px */
+        box-sizing: border-box;
+        /* Ensure padding is included in width */
+        text-align: left;
+        /* **Aligns all text content to the left** */
+    }
+
+    /* Ensure all text elements within service-content are left-aligned */
+    .service-content .sub-heading,
+    .service-content .heading,
+    .service-content .section-description {
+        text-align: left;
+        /* Left align these elements */
+        margin-left: 0;
+        /* Align to the left edge */
+        margin-right: auto;
+        /* Push content to the left */
+    }
+
+    .service-content .section-description {
+        margin-bottom: 10px;
+        /* Reduced from 15px */
+    }
+
+    .service-content .section-list {
+        list-style: none;
+        /* Remove default bullets */
+        padding: 0;
+        /* Remove default padding */
+        margin-bottom: 10px;
+        /* Reduced from 15px */
+        text-align: left;
+        /* Align the list itself to the left */
+        margin-left: 0;
+        /* Align the list to the left edge */
+        margin-right: auto;
+        /* Push list to the left */
+    }
+
+    .service-content .section-list li {
+        position: relative;
+        padding-left: 25px;
+        /* Space for custom bullet point on the left */
+        padding-right: 0;
+        /* Remove right padding */
+        margin-bottom: 5px;
+        /* Reduced from 8px */
+        text-align: left;
+        /* Ensure each list item text aligns left */
+        display: block;
+        /* Ensure list items behave as blocks for proper wrapping */
+        width: auto;
+        /* Allow li to take natural width */
+        margin-left: 0;
+        /* Align the list item to the left */
+        margin-right: auto;
+        /* Push list item to the left */
+    }
+
+    .service-content .section-list li::before {
+        content: '\2713';
+        /* Checkmark character */
+        font-family: 'Font Awesome 6 Free';
+        /* Assuming Font Awesome is loaded */
+        font-weight: 900;
+        /* For solid icon */
+        color: var(--check-mark-color);
+        position: absolute;
+        left: 0;
+        /* Position checkmark to the left */
+        right: unset;
+        /* Remove right positioning */
+        top: 0;
+        font-size: 1em;
+        line-height: 1.5;
+        /* Match body line-height */
+    }
+
+    .service-content .primary-button {
+        /* For buttons, margin-left: 0 and margin-right: auto will push it to the left */
+        margin-left: 0;
+        margin-right: auto;
+        width: auto;
+        /* Allow button to size naturally */
+    }
+
+
+    /* --- Responsive Adjustments for Smaller Screens --- */
+
+    /* Intermediate breakpoint for graceful resizing on larger tablets/smaller desktops */
+    @media (max-width: 1280px) {
+        .service-content-wrapper {
+            gap: 20px;
+            /* Further reduced gap for tighter spacing */
+            padding: 0 10px;
+            /* Adjust horizontal padding to the wrapper */
+        }
+
+        .service-image-container,
+        .service-content {
+            max-width: 50%;
+            /* Maintain 50% split, but content within will be tighter */
+            padding: 5px;
+            /* Reduced padding for tighter content */
+        }
+    }
+
+    /* Main breakpoint for stacking columns vertically */
+    @media (max-width: 991px) {
+
+        /* Adjust breakpoint for tablets/smaller desktops */
+        .service-content-wrapper {
+            flex-direction: column;
+            /* Stack image and text vertically */
+            gap: 20px;
+            /* Reduced gap when stacked */
+            width: 100%;
+            /* Ensure full width when stacked */
+            min-height: unset;
+            /* Remove min-height when stacked */
+            padding: 0;
+            /* No padding on wrapper when stacked */
+        }
+
+        .service-image-container,
+        .service-content {
+            flex: auto;
+            /* Allow items to take natural width when stacked */
+            max-width: 100%;
+            /* Allow them to use full width of wrapper */
+            text-align: center;
+            /* Center text when stacked */
+            padding: 10px;
+            /* Adjust padding for smaller screens */
+        }
+
+        .service-image {
+            height: auto;
+            /* Allow image height to adjust naturally when stacked */
+            max-height: 200px;
+            /* Further limit image height on small screens */
+            max-width: 90%;
+            /* Limit image width to prevent it from being too large */
+            margin: 0 auto;
+            /* Center image horizontally when stacked */
+        }
+
+        /* Center specific text elements when stacked */
+        .service-content .sub-heading,
+        .service-content .heading,
+        .service-content .section-description,
+        .service-content .section-list,
+        .service-content .primary-button {
+            text-align: center;
+            /* Center these elements on small screens */
+            margin-left: auto;
+            /* Center button */
+            margin-right: auto;
+            /* Center button */
+            max-width: 100%;
+            /* Remove max-width on small screens */
+        }
+
+        .service-content .section-list li {
+            padding-right: 0;
+            /* Remove right padding for list items when centered */
+            padding-left: 25px;
+            /* Add left padding for default bullet positioning */
+            text-align: left;
+            /* Align list item text left when stacked */
+            width: auto;
+            /* Allow width to be natural */
+        }
+
+        .service-content .section-list li::before {
+            right: unset;
+            /* Remove right positioning */
+            left: 0;
+            /* Position checkmark to the left */
+        }
+    }
+
+    @media (max-width: 576px) {
+
+        /* Even smaller screens (phones) */
+        .heading {
+            font-size: 28px;
+            /* Smaller heading for very small screens */
+        }
+
+        .sub-heading {
+            font-size: 1em;
+        }
+
+        .section-description {
+            font-size: 0.95em;
+        }
+
+        .service-content .section-list li {
+            font-size: 0.9em;
+        }
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--default-padding);
+    }
+
+    .section {
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        background-color: var(--white-color);
+        /* Default background */
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .section.layered-bg {
+        background-image: linear-gradient(rgba(240, 240, 240, 0.2), rgba(240, 240, 240, 0.2));
+        /* Subtle light gray overlay */
+    }
+
+    .heading {
+        font-size: 44px;
+        font-family: "Work Sans", sans serif;
+        font-weight: 800;
+        padding: 10px 0;
+    }
+
+    .sub-heading {
+        color: #ad471d;
+        font-weight: 700;
+    }
+
+    .paragraph-text {
+        text-align: left;
+        margin-bottom: var(--default-margin);
+        font-size: 1.1em;
+        color: var(--text-color);
+    }
+
+    .header-section {
+        position: relative;
+        /* For overlay positioning */
+        overflow: hidden;
+        /* Clip the overlay */
+        padding: 120px 0;
+        text-align: center;
+        color: var(--white-color);
+        background-blend-mode: multiply;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-attachment: fixed;
+        /* Keep the parallax effect */
+        background-image: linear-gradient(45deg, #ad471d, black, #f0f0f0, #ad471d, black);
+        background-size: 300% 300%;
+        animation: gradientAnimation 10s ease infinite;
+    }
+
+    .header-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        /* Subtle dark overlay */
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .header-section:hover .header-overlay {
+        opacity: 1;
+    }
+
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .header-section h1 {
+        font-size: 3.5em;
+        font-weight: var(--heading-font-weight);
+        margin-bottom: 20px;
+    }
+
+    /* FAQ Section Styles */
+    .faq-section {
+        padding: 80px 0;
+        text-align: center;
+        background-color: var(--white-off);
+    }
+
+    .faq-section .sub-heading {
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+
+    .faq-section .heading {
+        font-size: 44px;
+        font-family: "Work Sans", sans serif;
+        font-weight: 800;
+        padding: 10px 0;
+        color: var(--dark-text);
+    }
+
+    .faq-list {
+        max-width: 800px;
+        margin: 30px auto;
+        text-align: left;
+    }
+
+    .faq-item {
+        margin-bottom: 20px;
+        border: 1px solid var(--light-gray);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .faq-item:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-question {
+        background-color: var(--white-color);
+        color: var(--dark-text);
+        padding: 15px 20px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid var(--light-gray);
+        cursor: pointer;
+        font-weight: var(--subheading-font-weight);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
+        font-size: 15.5px;
+    }
+
+    .faq-question:focus {
+        outline: none;
+        background-color: var(--light-gray);
+    }
+
+    .faq-question::after {
+        content: '+';
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .faq-question.active::after {
+        content: '-';
+    }
+
+    .faq-answer {
+        padding: 15px 20px;
+        background-color: var(--white-off);
+        display: none;
+        border-top: 1px solid var(--light-gray);
+        font-size: 15px;
+    }
+
+    .faq-answer.open {
+        display: block;
+    }
+
+    /* Styles for the "Our Diverse Fleet" section */
+    .car-fleet-container {
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .car-fleet-container .sub-heading {
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+
+    .car-fleet-container .heading {
+        font-size: 44px;
+        font-family: "Work Sans", sans serif;
+        font-weight: 800;
+        padding: 10px 0;
+    }
+
+    .car-fleet-grid {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Adjusted minmax for responsiveness */
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .car-fleet-grid.compact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        /* More compact grid */
+    }
+
+    .car-fleet-item {
+        text-align: center;
+        padding: 20px;
+        border-radius: var(--border-radius);
+        background-color: var(--white-off);
+        box-shadow: var(--box-shadow);
+    }
+
+    .car-image-wrapper {
+        width: 80%;
+        max-width: 150px;
+        /* Limit image size */
+        margin: 0 auto 10px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .car-image-wrapper.small-wrapper {
+        max-width: 100px;
+        /* Smaller image for the fleet grid */
+    }
+
+    .car-fleet-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .car-fleet-item span {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--dark-text);
+        font-weight: 500;
+    }
+
+    .car-fleet-item .car-count {
+        color: var(--text-color);
+        font-size: 0.9em;
+    }
+
+    /* Styles for the "Explore Our Shuttle Services" section */
+    #our-services {
+        padding: 80px 0;
+        text-align: center;
+        background-color: var(--white-color);
+        /* Ensure white background */
+    }
+
+    #our-services .sub-heading {
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+
+    #our-services .heading {
+        font-size: 44px;
+        font-family: "Work Sans", sans serif;
+        font-weight: 800;
+        padding: 10px 0;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    @media (min-width: 900px) {
+        .services-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .service-item {
+        text-align: center;
+        padding: 30px;
+        border-radius: var(--border-radius);
+        background-color: var(--white-off);
+        box-shadow: var(--box-shadow);
+        transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+    }
+
+    .service-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-item i {
+        font-size: 2em;
+        /* Adjusted icon size */
+        color: var(--primary-color);
+        margin-bottom: 15px;
+    }
+
+    .service-item h3 {
+        color: var(--dark-text);
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        /* Adjusted heading size */
+        font-weight: var(--heading-font-weight);
+        /* Use heading font weight */
+    }
+
+    .service-item p {
+        color: var(--text-color);
+        line-height: 1.7;
+    }
+
+    .tab-button {
+        display: flex;
+        /* Enable Flexbox for the button content */
+        flex-direction: column;
+        /* Stack icon and text vertically */
+        align-items: center;
+        /* Center icon and text horizontally within the button */
+        text-align: center;
+        /* Ensure text itself is centered */
+        background: none;
+        /* Remove default button background */
+        border: none;
+        /* Remove default button border */
+        padding: 10px;
+        /* Add some padding around the content */
+        cursor: pointer;
+        /* Indicate it's clickable */
+    }
+
+    .tab-icon {
+        /* Styles for your SVG icons */
+        width: 30px;
+        /* Adjust icon size as needed */
+        height: 30px;
+        margin-bottom: 8px;
+        /* Add some space between the icon */
+        fill: var(--primary-color);
+        /* Example icon color */
+        transition: fill var(--transition-duration);
+    }
+
+    .tab-button span {
+        font-size: 0.9em;
+        color: var(--text-color);
+        transition: color var(--transition-duration);
+    }
+
+    .tab-button.active .tab-icon {
+        fill: #007bff;
+        /* Active tab icon color */
+    }
+
+    .tab-button.active span {
+        color: #007bff;
+        /* Active tab text color */
+        font-weight: bold;
+    }
+
+    /* Specific styles for the security solutions page content */
+    .advantages-list {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .advantages-list li {
+        text-align: center;
+        padding: 20px;
+        border-radius: var(--border-radius);
+        background-color: var(--white-off);
+        box-shadow: var(--box-shadow);
+    }
+
+    .advantages-list li i {
+        font-size: 1.5em;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+
+    .advantages-list li h3 {
+        color: var(--dark-text);
+        margin-bottom: 5px;
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    .advantages-list li p {
+        color: var(--text-color);
+    }
+
+    /* Adjusting the advantages list to three columns */
+    .advantages-list {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* Adjust min-width if needed */
+        gap: 30px;
+        /* Adjust the gap between items as needed */
+        margin-top: 30px;
+        /* Or your existing top margin */
+    }
+
+    /* Adjusting the services grid to three columns */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* Adjust min-width if needed */
+        gap: 20px;
+        /* Adjust the gap between services as needed */
+        margin-top: 30px;
+        /* Or your existing top margin */
+    }
+
+    /* Media query for larger screens to enforce three columns */
+    @media (min-width: 900px) {
+
+        /* Adjust the breakpoint if needed */
+        .services-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    /* Media query for larger screens to enforce three columns */
+    @media (min-width: 900px) {
+
+        /* Adjust the breakpoint if needed */
+        .advantages-list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+
+    .concluding-section {
+        background-color: var(--light-orange);
+        text-align: center;
+        padding: 60px 0;
+    }
+
+    .concluding-section .heading {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+
+    .concluding-section .sub-heading {
+        color: #8c3616;
+        margin-bottom: 10px;
+    }
+
+    .tab-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .tab-buttons button {
+        padding: 10px 20px;
+        border: 1px solid var(--primary-color);
+        background-color: transparent;
+        color: var(--primary-color);
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: background-color var(--transition-duration), color var(--transition-duration);
+    }
+
+    .tab-buttons button.active {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+    }
+
+    .tab-content {
+        display: none;
+        text-align: center;
+        padding: 20px;
+        border-radius: var(--border-radius);
+        background-color: var(--white-color);
+        box-shadow: var(--box-shadow);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+
+    .tab-content h3 {
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+
+    .tab-content p {
+        color: var(--text-color);
+        margin-bottom: 20px;
+    }
+
+    .tab-content .section-link {
+        display: inline-block;
+        padding: 10px 25px;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        text-decoration: none;
+        border-radius: var(--border-radius);
+        transition: background-color var(--transition-duration);
+    }
+
+    .tab-content .section-link:hover {
+        background-color: #c75a2b;
+    }
+
+    .primary-button {
+        font-family: 'Work Sans', sans-serif;
+        background-color: #AD471D;
+        color: white;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+        /* Change cursor to indicate it's interactive */
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: inline-block;
+        /* Allows it to be styled like a block but sit inline */
+        text-decoration: none;
+        /* Remove default link underline */
+    }
+
+    .primary-button:hover {
+        background-color: #7e350f;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+    }
+
+    .primary-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transform: translateX(-100%);
+        transition: transform 0.6s ease;
+    }
+
+    .primary-button:hover::before {
+        transform: translateX(100%);
+    }
+
+    .fleet-categories {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .fleet-categories button {
+        padding: 12px 25px;
+        border: none;
+        border-radius: var(--border-radius);
+        background-color: #eee;
+        color: var(--text-color);
+        font-size: 1em;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin: 0 10px;
+        box-shadow: none;
+        text-shadow: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .fleet-categories button:hover {
+        background-color: #7e350f;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+        color: var(--white-color);
+    }
+
+    .fleet-categories button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transform: translateX(-100%);
+        transition: transform 0.6s ease;
+    }
+
+    .fleet-categories button:hover::before {
+        transform: translateX(100%);
+    }
+
+    .fleet-categories button.active {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        box-shadow: var(--shadow);
+    }
+
+    .animated-grid .car-fleet-item {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .animated-grid.loaded .car-fleet-item {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .places-we-cater.image-grid-approach .places-image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .places-we-cater.image-grid-approach .place-image-item {
+        background-size: cover;
+        background-position: center;
+        height: 130px;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--white-color);
+        font-weight: var(--heading-font-weight);
+        font-size: 15.5px;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .places-we-cater.image-grid-approach .place-image-item:hover {
+        transform: scale(1.05);
+    }
+
+    .places-we-cater.image-grid-approach .place-image-item h3 {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1;
+        position: relative;
+        transition: opacity 0.3s ease-in-out;
+        font-family: var(--font-family);
+    }
+
+    .places-we-cater.image-grid-approach .place-image-item:hover h3 {
+        opacity: 0;
+    }
+
+    .places-we-cater.image-grid-approach .place-image-item .overlay-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        text-align: center;
+        font-family: var(--font-family);
+    }
+
+    .places-we-cater.image-grid-approach .place-image-item:hover .overlay-text {
+        opacity: 1;
+    }
+
+    .places-we-cater.image-grid-approach .place-image-item .overlay-text h4 {
+        color: var(--white-off);
+        font-size: 1.4em;
+        /* Slightly increase the heading size */
+        margin-bottom: 10px;
+        font-weight: var(--subheading-font-weight);
+        /* Add horizontal padding */
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+        font-weight: normal;
+    }
+
+    .places-we-cater.image-grid-approach .place-image-item .overlay-text p {
+        color: var(--white-off);
+        font-size: 15.5px;
+        line-height: 1.1;
+        /* Add horizontal padding */
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+        font-weight: normal;
+    }
+
+    .places-we-cater.image-grid-approach .place-image-item .overlay-text .read-more-button {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        border: none;
+        border-radius: 5px;
+        font-size: 0.85em;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        font-weight: normal;
+    }
+
+    .places-we-cater.image-grid-approach .place-image-item .overlay-text .read-more-button:hover {
+        background-color: #8c3a17;
+    }
+
+    /* Styles for the FAQ Section */
+    /* New styles for call to action section */
+    .call-to-action {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .cta-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .cta-heading {
+        font-size: 2em;
+        margin-bottom: 20px;
+        font-weight: var(--heading-font-weight);
+    }
+
+    .cta-text {
+        font-size: 1.1em;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cta-buttons .button {
+        display: inline-block;
+        padding: 15px 30px;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-size: 1em;
+        transition: background-color var(--transition-duration) ease;
+    }
+
+    .cta-buttons .primary-button {
+        background-color: var(--white-color);
+        color: var(--primary-color);
+    }
+
+    .cta-buttons .primary-button:hover {
+        background-color: #f0f0f0;
+    }
+
+    .cta-buttons .secondary-button {
+        background-color: transparent;
+        border: 2px solid var(--white-color);
+        color: var(--white-color);
+    }
+
+    .cta-buttons .secondary-button:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .cta-buttons .whatsapp-button-inline {
+        background-color: #25d366;
+        color: var(--white-color);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .cta-buttons .whatsapp-button-inline:hover {
+        background-color: #128c7e;
+    }
+
+    .cta-buttons .whatsapp-button-inline i {
+        margin-right: 5px;
+    }
+
+    @media (max-width: 768px) {
+        .cta-heading {
+            font-size: 1.8em;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .cta-buttons .button {
+            width: 100%;
+        }
+    }

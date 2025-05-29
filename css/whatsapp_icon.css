@@ -1,0 +1,41 @@
+.sekwape-whatsapp-link-container {
+    position: fixed;
+    right: 20px; /* Align to the right */
+    bottom: 20px; /* Align to the bottom */
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: auto;
+    /* Remove top and transform for vertical centering */
+}
+
+.sekwape-whatsapp-link-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sekwape-whatsapp-icon {
+    width: 50px;
+    height: auto;
+    display: block;
+}
+
+/* You can remove or adjust the padding on main > section:first-child */
+main > section:first-child {
+    padding-left: 20px; /* Or remove entirely if no overlap */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sekwape-whatsapp-link-container {
+        right: 10px;
+        bottom: 10px;
+        width: 40px;
+    }
+    .sekwape-whatsapp-icon {
+        width: 40px;
+    }
+    main > section:first-child {
+        padding-left: 10px; /* Or remove entirely */
+    }
+}
